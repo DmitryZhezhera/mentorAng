@@ -1,0 +1,60 @@
+.course-card {
+  font-family: Arial;
+  min-width: 215px;
+  max-width: 250px;
+  border: 1px solid lightgray;
+  box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1), 0 3px 1px 0 rgba(20, 23, 28, 0.1);
+  margin: 20px;
+
+  &__head {
+    height: 150px;
+    border-bottom: 1px solid lightgray;
+    padding: 15px;
+  }
+
+  &__body {
+    padding: 15px 15px 25px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__author {
+    font-size: 14px;
+    color: lightgray;
+  }
+
+  &__rating{
+    padding: 10px 0;
+  }
+
+  &__rating-value {
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0 5px;
+  }
+
+  &__rating-students {
+    color: lightgray;
+    font-size: 14px;
+  }
+  &__prices{
+    text-align: right;
+    margin: 0;
+    vertical-align: center;
+  }
+
+  &__discount{
+    font-weight: 400;
+    font-size: 15px;
+    color: lightgray;
+    margin: 0 10px;
+    text-decoration: line-through;
+  }
+
+  &__price{
+    font-weight: 700;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,15 @@
+*, *:before, *:after{
+  box-sizing: border-box;
+}
+body{
+  font-family: "Arial";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+.courses-cards{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}

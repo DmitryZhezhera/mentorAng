@@ -10,10 +10,19 @@ import {FooterComponent} from './modules/footer/footer.component';
 import {MainComponent} from './modules/main/main.component';
 import {CourseComponent} from './pages/course/course.component';
 import {AuthComponent} from './modules/header/auth/auth.component';
-import { TopCourcesComponent } from './modules/main/top-cources/top-cources.component';
+import {TopCourcesComponent} from './modules/main/top-cources/top-cources.component';
 import {TopCoursesService} from './services/top-courses.service';
-import { NavComponent } from './components/nav/nav.component';
-import { HomeComponent } from './pages/home/home.component';
+import {NavComponent} from './components/nav/nav.component';
+import {HomeComponent} from './pages/home/home.component';
+import {CourseCardComponent} from './components/course-card/course-card.component';
+import {RegisterComponent} from './components/register/register.component';
+import {LoginComponent} from './components/login/login.component';
+import {EventsComponent} from './components/events/events.component';
+import {SpecialEventsComponent} from './components/special-events/special-events.component';
+import {AuthService} from './services/auth/auth.service';
+import {EventService} from './services/event/event.service';
+import {AuthGuard} from './auth.guard';
+
 // import { CoursesComponent } from './pages/courses/courses/courses.component';
 
 @NgModule({
@@ -27,6 +36,11 @@ import { HomeComponent } from './pages/home/home.component';
         TopCourcesComponent,
         NavComponent,
         HomeComponent,
+        CourseCardComponent,
+        RegisterComponent,
+        LoginComponent,
+        EventsComponent,
+        SpecialEventsComponent,
         // CoursesComponent,
     ],
     imports: [
@@ -35,7 +49,7 @@ import { HomeComponent } from './pages/home/home.component';
         HttpClientModule,
         FormsModule
     ],
-    providers: [TopCoursesService],
+    providers: [TopCoursesService, AuthService, AuthGuard, EventService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

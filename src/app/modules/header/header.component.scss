@@ -9,3 +9,19 @@ header{
   justify-content: space-between;
   align-items: center;
 }
+
+.auth-btn{
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  font-family: Arial;
+  transition: 700ms;
+  &:hover{
+    transition: 700ms;
+    text-decoration: none;
+    color: lightgray;
+  }
+  &.active{
+    color: lightgray;
+  }
+}

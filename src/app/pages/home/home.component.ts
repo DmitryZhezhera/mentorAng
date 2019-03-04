@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {HeaderComponent} from '../../modules/header/header.component';
+import {FooterComponent} from '../../modules/footer/footer.component';
 
 @Component({
   selector: 'app-home',

@@ -16,7 +16,7 @@ export class TopCourcesComponent implements OnInit {
     }
 
     search() {
-        this.http.get('https://test-mentor.herokuapp.com/allimage')
+        this.http.get('https://test-mentor.herokuapp.com/all_image')
             .subscribe((response) => {
                 this.response = response;
                 console.log(this.response);
