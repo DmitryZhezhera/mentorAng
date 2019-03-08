@@ -12,22 +12,37 @@ import {AuthGuard} from './auth.guard';
 
 
 const routes: Routes = [
-    {path: '', redirectTo: '/events', pathMatch: 'full'},
-    {path: 'events', component: EventsComponent},
     {
-        path: 'special',
-        component: SpecialEventsComponent,
+        path: 'guest',
+        loadChildren: './modules/guest/guest.module#GuestModule',
+    },
+    {
+        path: '',
+        loadChildren: './modules/user/user.module#UserModule',
         canActivate: [AuthGuard]
     },
-    {path: 'login', component: LoginComponent},
-    {
-        path: 'register',
-        component: RegisterComponent,
-        canActivate: [AuthGuard]
-    },
-    {path: 'home', component: HomeComponent},
-    {path: 'course', component: CourseComponent},
-    {path: 'courses', loadChildren: './pages/courses/courses.module#CoursesModule'},
+    // {path: '', component: LoginComponent}
+
+    // {path: '', redirectTo: '/events', pathMatch: 'full'},
+    // {path: 'events', component: EventsComponent},
+    // {
+    //     path: 'special',
+    //     component: SpecialEventsComponent,
+    //     canActivate: [AuthGuard]
+    // },
+    // {path: 'login', component: LoginComponent},
+    // {
+    //     path: 'register',
+    //     component: RegisterComponent
+    // },
+    // {path: 'home', component: HomeComponent},
+    // {
+    //     path: 'course',
+    //     component: CourseComponent,
+    //     canActivate: [AuthGuard]
+    // },
+    // {path: 'courses', loadChildren: './pages/courses/courses.module#CoursesModule'},
+    // {path: '', loadChildren: './pages/courses/courses.module#CoursesModule'},
 ];
 
 @NgModule({
